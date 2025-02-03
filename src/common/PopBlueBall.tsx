@@ -1,0 +1,128 @@
+/* eslint-disable jsx-a11y/click-events-have-key-events */
+/* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
+import { useState } from "react";
+import expandArrow from "../assets/img/expandArrow.svg";
+import closeExpandArrow from "../assets/img/closeExpandArrow.svg";
+import n0 from "../assets/img/n01.svg";
+import { IoIosSettings } from "react-icons/io";
+// import n0Black from "../assets/n01Black.svg";
+// import Chat from "./Chat";
+
+import ballBlue from "../assets/media/ballBlue.mp4";
+import ball from "../assets/img/ballBlueLogin.png";
+import Form from "./Form";
+import Chat from "./Chat";
+
+// import VideoBlueBall from "./VideoBlueBall";
+// import { ThemeContext } from "../context/ThemeContext";
+
+export default function PopBlueBall({
+  // closeForm,
+  handleView,
+}: {
+  // closeForm: () => void;
+  handleView: (view: "main" | "settings" | "tasks") => void;
+}) {
+  const [isExpandForm, setIsExpandForm] = useState(false);
+  const [countExpand, setCountExpand] = useState(0);
+
+  //   const { theme } = useContext(ThemeContext);
+
+  function onChangeImageArrow() {
+    setIsExpandForm(!isExpandForm);
+    setCountExpand(countExpand + 1);
+  }
+
+  function closePopBlueBall() {
+    setCountExpand(0);
+    setIsExpandForm(false);
+    // closeForm();
+  }
+
+  // function closePopBlueBallVoice() {
+  //   closePopBlueBall();
+  //   const ballPop = document.getElementById("ballPop");
+
+  //   ballPop?.classList.add("pulse-blue-ball");
+  // }
+
+  const isCloseExpandForm = countExpand !== 0 && countExpand % 2 === 0;
+
+  return (
+    <div className="pop-blue-ball-container">
+      <div
+        className={`pop-blue-ball ${isExpandForm ? "expand-form" : isCloseExpandForm ? "close-expand-form" : ""}`}
+        style={{
+          height: "calc(100vh - 35px)",
+        }}
+      >
+        <div className="expand-arrow-container">
+          <div style={{ display: "flex", gap: "5px", alignItems: "center" }}>
+            <IoIosSettings
+              size={20}
+              onClick={() => handleView("settings")}
+              // className="text-[#828282] bg-[#828282]"
+              color="#828282"
+            />
+            {/* <img
+              src={isExpandForm ? closeExpandArrow : expandArrow}
+              alt="Icon Expand Arrow"
+              className="expand-arrow"
+              onClick={onChangeImageArrow}
+            /> */}
+          </div>
+        </div>
+
+        <div className="content-container">
+          <div
+            className={`content-header ${isExpandForm ? "expand-form-header" : ""}`}
+          >
+            <div className="video-wrapper">
+              <img
+                style={{ width: "100px", height: "100px" }}
+                src={ball}
+                alt="Bolinha azul"
+              />
+              {/* <video
+                autoPlay
+                loop
+                muted
+                onClick={closePopBlueBall}
+                className="video-blue-ball"
+              >
+                <source src={ballBlue} type="video/mp4" />
+                Seu navegador não suporta a tag de vídeo.
+              </video> */}
+            </div>
+
+            <div
+              className={`intro-text ${isExpandForm ? "hidden" : "visible"}`}
+            >
+              <p
+                className="intro-text-content"
+                style={{
+                  transform: "translateY(6px)",
+                }}
+              >
+                Olá! no que posso te ajudar?
+              </p>
+            </div>
+
+            <div
+              className={`image-wrapper ${isExpandForm ? "visible" : "hidden"}`}
+            >
+              <img src={n0} alt="Imagem n01" className="image-n01" />
+            </div>
+          </div>
+
+          <Chat isExpandForm={isExpandForm} />
+        </div>
+
+        <Form
+          closePopBlueBall={closePopBlueBall}
+          // closePopBlueBallVoice={closePopBlueBallVoice}
+        />
+      </div>
+    </div>
+  );
+}

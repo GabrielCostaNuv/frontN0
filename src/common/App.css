@@ -1,0 +1,355 @@
+@font-face {
+  font-family: "Galano Grotesque";
+  src:
+    local("Galano Grotesque"),
+    url(./fonts/galano-grotesque-alt/GalanoGrotesqueSemiBold.otf)
+      format("truetype");
+}
+
+@font-face {
+  font-family: "Galano Grotesque Regular";
+  src:
+    local("Galano Grotesque"),
+    url(./fonts/galano-grotesque-alt/GalanoGrotesqueMedium.otf)
+      format("truetype");
+}
+
+body {
+  background-color: #202124 !important;
+  color: white;
+}
+
+.section-box {
+  width: 100%;
+  position: relative;
+  background-color: #202124;
+}
+
+.fixed-bottom-right {
+  position: fixed;
+  bottom: -20px;
+  right: -70px;
+  background-color: #202124;
+}
+
+/* Estilo do vídeo */
+.video-style {
+  width: 18rem; /* 72px */
+  object-fit: cover;
+  mix-blend-mode: screen;
+  filter: brightness(0.75) contrast(1.3);
+}
+
+/* Mostrar/ocultar baseado no estado */
+.video-style.hidden {
+  display: none;
+}
+
+.video-style.visible {
+  display: flex;
+}
+
+/* Transições de classe */
+.transition-all {
+  transition: all 0.3s ease;
+}
+
+/* Estilo para o formulário pop-up */
+.pop-up-form {
+  position: fixed;
+  width: 19.3125rem; /* 309px */
+  bottom: 20px; /* 5px */
+  right: 25px; /* 5px */
+}
+
+.pop-up-form.hidden {
+  display: none;
+}
+
+.pop-up-form.visible {
+  display: block;
+}
+
+/* Container principal do PopBlueBall */
+.pop-blue-ball-container {
+  position: relative;
+}
+
+/* Estilo do PopBlueBall (formulário expandido ou contraído) */
+.pop-blue-ball {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all 0.3s ease;
+  border-radius: 16px;
+  position: relative;
+  /* background-color: var(--white, white); */
+  /* backdrop-filter: contrast(61%); */
+}
+
+/* Formulário expandido */
+.expand-form {
+  height: calc(100vh - 55px);
+}
+
+/* Formulário contraído */
+.close-expand-form {
+  height: 160px;
+}
+
+/* Contêiner do ícone de seta de expansão */
+.expand-arrow-container {
+  position: absolute;
+  right: 6px;
+  top: 13px;
+  z-index: 50;
+}
+
+/* Estilo da seta */
+.expand-arrow {
+  width: 13px;
+  height: 13px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+/* Estilo do cabeçalho de conteúdo */
+.content-container {
+  position: relative;
+}
+
+.content-header {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.hoverLink:hover {
+  text-decoration: underline;
+}
+
+/* Estilo do vídeo azul */
+.video-wrapper {
+  background-color: #454648;
+  position: absolute;
+  top: -23px;
+  left: -40px;
+  clip-path: circle(22% at 50% 47%);
+}
+
+
+.pulse-blue-ball {
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1); /* Padrão, tamanho original */
+  }
+  50% {
+    transform: scale(1.1); /* Aumenta um pouco */
+  }
+  100% {
+    transform: scale(1); /* Volta ao tamanho original */
+  }
+}
+
+.video-blue-ball {
+  width: 179px;
+  height: 119px;
+  mix-blend-mode: screen;
+  filter: saturate(120%) brightness(0.85) contrast(150%);
+  border: 0;
+  transition: all 0.3s ease;
+}
+
+/* Texto de introdução quando o formulário não está expandido */
+.intro-text {
+  display: block;
+  margin-left: 45px;
+  z-index: 30;
+}
+
+/* Texto quando o formulário está expandido */
+.intro-text-content {
+  color: #7d7d7d;
+  font-size: 12px;
+  font-family: Galano Grotesque;
+  font-weight: 900;
+}
+
+/* Quando o formulário está expandido, a imagem n01 deve estar visível */
+.image-wrapper {
+  margin-top: 20px;
+  margin-right: 2px;
+}
+
+.image-n01 {
+  width: 43.27px;
+  height: 11px;
+}
+
+/* Controlando a visibilidade do texto de introdução e da imagem n01 */
+.hidden {
+  display: none;
+}
+
+.visible {
+  display: block;
+}
+
+/* Ajuste do cabeçalho do conteúdo quando o formulário está expandido */
+.expand-form-header {
+  justify-content: flex-end;
+}
+
+/* Estilo para o formulário */
+.form-container {
+  /* position: fixed;
+  bottom: 8px;
+  left: 21px; */
+  /* width: 269px; */
+  z-index: 50;
+  margin-top: 38px;
+}
+
+/* Estilo do textarea */
+.text-area {
+  background-color: #d9d9d9;
+  border-radius: 1.25rem; /* rounded-xl */
+  padding: 0.5rem 0.75rem 0.5rem 0.75rem; /* py-2 px-3 */
+  /* padding-right: 1.25rem;  */
+  resize: none;
+  width: 90%; /* w-[275px] */
+  height: 75px; /* h-[75px] */
+  font-size: 0.75rem; /* text-xs */
+  outline: 0;
+  font-family: Galano Grotesque Regular;
+}
+
+/* Esconder o botão */
+button.hidden {
+  display: none;
+}
+
+.chat-container::-webkit-scrollbar {
+  width: 12px;
+}
+
+/* Estilo para o container de mensagens */
+.chat-container {
+  margin-top: 30px; /* mt-10 */
+  opacity: 0; /* .opacityMessage */
+  max-height: 100%;
+  overflow-y: scroll;
+  position: relative;
+  height: calc(100vh - 264px);
+  /* gap: 17px; */
+}
+
+.opacityMessage {
+  /* display: flex;
+  flex-direction: column; */
+
+  animation: opacityDiv 2s forwards;
+}
+
+@keyframes opacityDiv {
+  0% {
+    opacity: 0;
+    visibility: hidden;
+  }
+  100% {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+/* Controle de visibilidade */
+.chat-container.hidden {
+  display: none;
+}
+
+/* Estilo das mensagens */
+.message {
+  width: 75%; /* w-3/4 */
+  min-height: 37px;
+  display: flex;
+  align-items: center;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  padding: 0 8px;
+  margin-bottom: 17px;
+}
+
+.message-dot {
+  width: 75%;
+  min-height: 37px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  padding: 0 8px;
+}
+
+.user-message {
+  background-color: #7d7d7d;
+  margin-right: auto;
+}
+
+.bot-message {
+  background-color: #d9d9d9;
+  flex-direction: column;
+  margin-left: auto;
+}
+
+.message-text {
+  font-size: 0.875rem; /* text-sm */
+  font-family: "serif", sans-serif;
+}
+
+/* Estilo do ícone do microfone */
+.mic-button {
+  position: absolute;
+  right: 0rem; /* right-[0.59rem] */
+  top: 0.5rem; /* top-2 */
+  cursor: pointer; /* hover:cursor-pointer */
+  transition: all 0.3s ease;
+  background-color: transparent;
+  border: 0;
+}
+
+.mic-icon:hover {
+  opacity: 0.8; /* Efeito de opacidade ao passar o mouse, pode ser ajustado */
+}
+
+.loading {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #555;
+}
+
+.dot {
+  display: inline-block;
+  animation: bounce 1.5s infinite;
+}
+
+.dot:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.dot:nth-child(2) {
+  animation-delay: 0.3s;
+}
+
+.dot:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
