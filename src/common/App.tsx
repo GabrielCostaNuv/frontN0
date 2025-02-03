@@ -143,13 +143,13 @@ const App = () => {
                   alt="n01 Logo"
                 />
               </Flex>
-              {/* {hasAPIKey && (
+              {hasAPIKey && (
                 <HStack>
-                  <IconButton
+                  {/* <IconButton
                     icon={<SettingsIcon />}
                     onClick={() => setView("settings")}
                     aria-label="open settings"
-                  />
+                  /> */}
                   <Button
                     leftIcon={<Icon as={BsFolder} />}
                     // colorScheme="blue"
@@ -164,7 +164,7 @@ const App = () => {
                     Tarefas Salvas
                   </Button>
                 </HStack>
-              )} */}
+              )}
             </HStack>
             <Settings setView={setView} />
           </div>
@@ -189,18 +189,42 @@ const App = () => {
               </Flex>
               {hasAPIKey && (
                 <HStack>
+                  {/* <Button
+                    // colorScheme="blue"
+                    padding="12px"
+                    backgroundColor="gray"
+                    color="white"
+                    border="none"
+                    borderRadius="4px"
+                    cursor="pointer"
+                  >
+                   
+                  </Button> */}
                   <IconButton
                     icon={<SettingsIcon />}
+                    padding="12px"
+                    backgroundColor="gray"
+                    color="white"
+                    border="none"
+                    borderRadius="4px"
+                    cursor="pointer"
                     onClick={() => setView("settings")}
                     aria-label="open settings"
                   />
-                  {/* <Button
+
+                  <Button
                     leftIcon={<Icon as={BsFolder} />}
-                    colorScheme="blue"
+                    // colorScheme="blue"
+                    padding="12px"
+                    backgroundColor="gray"
+                    color="white"
+                    border="none"
+                    borderRadius="4px"
+                    cursor="pointer"
                     onClick={() => setView("tasks")}
                   >
                     Tarefas Salvas
-                  </Button> */}
+                  </Button>
                 </HStack>
               )}
             </HStack>
@@ -223,7 +247,7 @@ const App = () => {
               </div> */}
 
               <div className={`pop-up-form visible`}>
-                <PopBlueBall  handleView={handleView} />
+                <PopBlueBall handleView={handleView} />
               </div>
             </section>
           </ChatContextProvider>
@@ -252,16 +276,22 @@ const App = () => {
               <HStack>
                 <IconButton
                   icon={<SettingsIcon />}
+                  padding="12px"
+                  backgroundColor="gray"
+                  color="white"
+                  border="none"
+                  borderRadius="4px"
+                  cursor="pointer"
                   onClick={() => setView("settings")}
                   aria-label="open settings"
                 />
-                {/* <Button
+                <Button
                   leftIcon={<Icon as={BsFolder} />}
                   colorScheme="blue"
                   onClick={() => setView("tasks")}
                 >
                   Tarefas Salvas
-                </Button> */}
+                </Button>
               </HStack>
             )}
           </HStack>

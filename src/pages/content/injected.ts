@@ -17,9 +17,23 @@ function injectSideButton() {
     button.style.width = "120px";
     button.style.height = "120px";
     button.style.borderRadius = "10px";
+
+    const video = document.createElement("video");
+    video.src =
+      "https://raw.githubusercontent.com/GabrielCostaNuv/frontN0/front/src/assets/media/ballBlue.mp4";
+    // video.type = "video/mp4";
+   
+    video.style.width = "100%"; // Ajusta para preencher o botão
+    video.style.height = "100%"; // Ajusta para preencher o botão
+    // video.controls = true; // Adiciona controles ao vídeo
+    
+    video.autoplay = true;
+
+    // Adiciona o vídeo ao botão
+    button.appendChild(video);
     // button.style.backgroundColor = "#007bff";
-    button.style.background = `url('https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Frame_5__2_-removebg-preview-FxhD5CyQmP7Ba1Xh4bOZHXHRLkfX5J.png') center center/contain no-repeat`;
-    button.style.backgroundColor = "transparent";
+    // button.style.background = `url('https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Frame_5__2_-removebg-preview-FxhD5CyQmP7Ba1Xh4bOZHXHRLkfX5J.png') center center/contain no-repeat`;
+    // button.style.backgroundColor = "transparent";
     button.style.color = "white";
     button.style.border = "none";
     // button.style.boxShadow = "0px 4px 6px rgba(0, 0, 0, 0.1)";

@@ -122,20 +122,20 @@ const TaskUI = ({
       runTask();
       closePopBlueBall();
 
-      chrome.sidePanel
-        .setOptions({ enabled: false })
-        .then(() => chrome.sidePanel.setOptions({ enabled: true }))
-        .catch((error) => {
-          console.error("Erro ao fechar o side panel:", error);
-        });
+      // chrome.sidePanel
+      //   .setOptions({ enabled: false })
+      //   .then(() => chrome.sidePanel.setOptions({ enabled: true }))
+      //   .catch((error) => {
+      //     console.error("Erro ao fechar o side panel:", error);
+      //   });
     }
   };
 
-  useEffect(() => {
-    if (taskSuccess) {
-      state.setInstructions("");
-    }
-  }, [taskSuccess]);
+  // useEffect(() => {
+  //   if (taskSuccess) {
+  //     state.setInstructions("");
+  //   }
+  // }, [taskSuccess]);
 
   function changeValueInput(value: string) {
     state.setInstructions(value);
@@ -154,7 +154,7 @@ const TaskUI = ({
         onKeyDown={onKeyDown}
         style={{
           borderRadius: "1.25rem",
-          padding: "10px 0 0 10px",
+          padding: "10px 10px 0 10px",
           fontFamily: "Galano Grotesque Regular;",
           marginLeft: "-6px",
           marginTop: "-5px",
