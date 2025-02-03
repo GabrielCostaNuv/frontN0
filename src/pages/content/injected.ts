@@ -18,7 +18,7 @@ function injectSideButton() {
     button.style.height = "120px";
     button.style.borderRadius = "10px";
     // button.style.backgroundColor = "#007bff";
-    button.style.background = `url('https://drive.google.com/file/d/1vtIXQA-L0KAIv1DD6hzoGnPC9lSVDhcX/view?usp=sharing') center center/contain no-repeat`;
+    button.style.background = `url('https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Frame_5__2_-removebg-preview-FxhD5CyQmP7Ba1Xh4bOZHXHRLkfX5J.png') center center/contain no-repeat`;
     button.style.backgroundColor = "transparent";
     button.style.color = "white";
     button.style.border = "none";
