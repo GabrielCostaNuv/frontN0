@@ -51,7 +51,7 @@ export default function PopBlueBall({
   return (
     <div className="pop-blue-ball-container">
       <div
-        className={`pop-blue-ball ${isExpandForm ? "expand-form" : isCloseExpandForm ? "close-expand-form" : ""}`}
+        className={`pop-blue-ball`}
         style={{
           height: "calc(100vh - 35px)",
         }}
