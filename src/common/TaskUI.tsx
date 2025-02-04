@@ -146,7 +146,7 @@ const TaskUI = ({
       <AutosizeTextarea
         // eslint-disable-next-line jsx-a11y/no-autofocus
         autoFocus
-        placeholder="Digite aqui o seu comando."
+        placeholder="Enter your command here."
         value={state.instructions || ""}
         isDisabled={taskInProgress || state.isListening}
         onChange={(e) => state.setInstructions(e.target.value)}

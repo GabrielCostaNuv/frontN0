@@ -108,16 +108,15 @@ const SetAPIKey = ({
       }}
     >
       <p style={{ margin: "0" }}>
-        Você precisará de uma chave de API do OpenAI ou Anthropic para executar
-        o Nova no modo de desenvolvedor. Se você ainda não tiver uma, pode criar
-        uma em sua{" "}
+        You will need an OpenAI or Anthropic API key to run N01 in developer
+        mode. If you don't already have one, you can create one in your{" "}
         <a
           href="https://platform.openai.com/account/api-keys"
           style={{ color: "blue" }}
           target="_blank"
           rel="noopener noreferrer"
         >
-          conta OpenAI
+          OpenAI account
         </a>{" "}
         ou sua{" "}
         <a
@@ -126,13 +125,13 @@ const SetAPIKey = ({
           target="_blank"
           rel="noopener noreferrer"
         >
-          conta Anthropic
+          Anthropic account
         </a>
         .
         <br />
-        <br />O Nova armazena suas chaves de API localmente no seu dispositivo e
-        elas são usadas apenas para se comunicar com a API do OpenAI e/ou a API
-        do Anthropic.
+        <br />
+        N01 stores its API keys locally on your device and are only used to
+        communicate with the OpenAI API and/or the Anthropic API. API.
       </p>
 
       <div style={{ position: "relative", padding: "8px 0" }}>
@@ -157,7 +156,7 @@ const SetAPIKey = ({
           htmlFor="openAIKey"
           style={{ fontSize: "1rem", fontWeight: 600 }}
         >
-          Chave de API do OpenAI
+          OpenAI API key
         </label>
         <div style={{ display: "flex", gap: "8px" }}>
           <input
@@ -185,7 +184,7 @@ const SetAPIKey = ({
                 cursor: "pointer",
               }}
             >
-              {showPassword ? "Ocultar" : "Mostrar"}
+              {showPassword ? "Hidden" : "Show"}
             </button>
           )}
         </div>
@@ -199,7 +198,7 @@ const SetAPIKey = ({
           <input
             id="openAIBaseUrl"
             type="text"
-            placeholder="Definir URL Base"
+            placeholder="Define Base URL"
             value={openAIBaseUrl}
             onChange={(e) => setOpenAIBaseUrl(e.target.value)}
             style={{
@@ -232,13 +231,13 @@ const SetAPIKey = ({
           htmlFor="anthropicKey"
           style={{ fontSize: "1rem", fontWeight: 600 }}
         >
-          Chave de API do Anthropic
+          Anthropic API key
         </label>
         <div style={{ display: "flex", gap: "8px" }}>
           <input
             id="anthropicKey"
             type={showPassword ? "text" : "password"}
-            placeholder="Insira a chave de API do Anthropic"
+            placeholder="Enter the Anthropic API key"
             value={anthropicKey}
             onChange={(e) => setAnthropicKey(e.target.value)}
             style={{
@@ -260,7 +259,7 @@ const SetAPIKey = ({
                 cursor: "pointer",
               }}
             >
-              {showPassword ? "Ocultar" : "Mostrar"}
+              {showPassword ? "Hidden" : "Show"}
             </button>
           )}
         </div>
@@ -274,7 +273,7 @@ const SetAPIKey = ({
           <input
             id="anthropicBaseUrl"
             type="text"
-            placeholder="Definir URL Base"
+            placeholder="Define Base URL"
             value={anthropicBaseUrl}
             onChange={(e) => setAnthropicBaseUrl(e.target.value)}
             style={{
@@ -299,7 +298,7 @@ const SetAPIKey = ({
           width: "100%",
         }}
       >
-        Salvar
+        Save
       </button>
     </div>
   );

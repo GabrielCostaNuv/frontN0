@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Box } from "@chakra-ui/react";
 import { CurrentTaskSlice } from "../state/currentTask";
@@ -15,14 +14,14 @@ export default function TaskStatus() {
   }
 
   const displayedStatus: Record<CurrentTaskSlice["actionStatus"], string> = {
-    idle: "💤 Ocioso",
-    "attaching-debugger": "🔗 Anexando Depurador",
-    "pulling-dom": "🌐 Entendendo o Site",
-    "annotating-page": "🌐 Entendendo o Site",
-    "fetching-knoweldge": "🧠 Obtendo Instruções",
-    "generating-action": "🤔 Pensando e Planejando",
-    "performing-action": "🚀 Executando Ação",
-    waiting: "⏳ Aguardando",
+    idle: "💤 Idle",  
+    "attaching-debugger": "🔗 Attaching Debugger",
+    "pulling-dom": "🌐 Understanding the Site",
+    "annotating-page": "🌐 Understanding the Site",
+    "fetching-knoweldge": "🧠 Getting Instructions",
+    "generating-action": "🤔 Thinking and Planning",
+    "performing-action": "🚀 Performing Action",
+    waiting: "⏳ Waiting",
   };
 
   return (

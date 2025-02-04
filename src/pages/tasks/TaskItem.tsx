@@ -28,7 +28,7 @@ const TaskItem = ({
   };
 
   return (
-    <HStack spacing={3} p={3} bg="gray.100" borderRadius="md">
+    <HStack spacing={3} p={3} bg="gray.100" borderRadius="md" marginBottom="16px">
       <Input
         value={taskName}
         onChange={(e) => setTaskName(e.target.value)}
@@ -36,8 +36,8 @@ const TaskItem = ({
         size="sm"
         bg="white"
         style={{
-          borderRadius: "4px",
-          padding: "3px",
+          borderRadius: "8px",
+          padding: "8px",
           border: "none",
           outline: "none",
           fontFamily: "Galano Grotesque Regular;",
@@ -49,6 +49,9 @@ const TaskItem = ({
         color="white"
         border="none"
         borderRadius="4px"
+        height={30}
+        width={30}
+
         cursor="pointer"
         onClick={handleExecute}
       >
@@ -59,6 +62,8 @@ const TaskItem = ({
         backgroundColor="red"
         color="white"
         border="none"
+        height={30}
+        width={30}
         borderRadius="4px"
         cursor="pointer"
         onClick={() => removeTask(task.id)}

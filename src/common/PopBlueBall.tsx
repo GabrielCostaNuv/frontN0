@@ -217,7 +217,7 @@ export default function PopBlueBall({
                   transform: "translateY(6px)",
                 }}
               >
-                Olá! no que posso te ajudar?
+                Hello! What can I do for you?
               </p>
             </div>
 
@@ -236,7 +236,7 @@ export default function PopBlueBall({
           <VStack
             spacing={2}
             align="center"
-            gap={5}
+            gap={10}
             display="flex"
             justifyContent="center"
           >
@@ -253,9 +253,11 @@ export default function PopBlueBall({
                   placeholder="Task name..."
                   style={{
                     borderRadius: "4px",
-                    padding: "3px",
+                    padding: "10px 0px 10px 0px",
                     border: "none",
                     outline: "none",
+                    width: "100%",
+                    textIndent: "5px",
                     fontFamily: "Galano Grotesque Regular;",
                   }}
                   value={taskName}
@@ -264,11 +266,12 @@ export default function PopBlueBall({
                 />
                 <Button
                   style={{
-                    padding: "12px",
+                    padding: "10px 5px 10px 5px",
                     backgroundColor: "green",
                     color: "white",
                     border: "none",
                     borderRadius: "4px",
+                    width: "100%",
                     cursor: "pointer",
                   }}
                   onClick={handleConfirmTask}

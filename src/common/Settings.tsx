@@ -71,7 +71,7 @@ const Settings = ({ setView }: SettingsProps) => {
           onClick={() =>
             view === "settings" ? closeSetting() : backToSettings()
           }
-          aria-label="voltar"
+          aria-label="back"
         >
           <span style={{ color: "white" }}>&lt;</span> {/* Ícone de seta */}
         </button>
@@ -99,7 +99,7 @@ const Settings = ({ setView }: SettingsProps) => {
                 }}
                 className="hoverLink"
               >
-                Configurações
+                Settings
               </a>
             </li>
             {view === "knowledge" && (
@@ -161,10 +161,10 @@ const Settings = ({ setView }: SettingsProps) => {
           >
             <div>
               <label htmlFor="api-settings" style={{ fontSize: "16px" }}>
-                Configurações da API
+                API Settings
               </label>
               <p style={{ fontSize: "14px", color: "gray" }}>
-                A chave da API é armazenada localmente no seu dispositivo
+                The API key is stored locally on your device.
               </p>
             </div>
             <button
@@ -178,7 +178,7 @@ const Settings = ({ setView }: SettingsProps) => {
                 cursor: "pointer",
               }}
             >
-              Editar
+              Edit
             </button>
           </div>
           <button
@@ -192,7 +192,7 @@ const Settings = ({ setView }: SettingsProps) => {
               cursor: "pointer",
             }}
           >
-            Voltar
+            Back
           </button>
         </div>
       )}

@@ -74,7 +74,7 @@ const App = () => {
     //             colorScheme="blue"
     //             onClick={() => setView('tasks')}
     //           >
-    //             Tarefas Salvas
+    //             Saved Tasks
     //           </Button>
     //         </HStack>
     //       )}
@@ -161,7 +161,7 @@ const App = () => {
                     cursor="pointer"
                     onClick={() => setView("tasks")}
                   >
-                    Tarefas Salvas
+                    Saved Tasks
                   </Button>
                 </HStack>
               )}
@@ -223,7 +223,7 @@ const App = () => {
                     cursor="pointer"
                     onClick={() => setView("tasks")}
                   >
-                    Tarefas Salvas
+                    Saved Tasks
                   </Button>
                 </HStack>
               )}
@@ -290,7 +290,7 @@ const App = () => {
                   colorScheme="blue"
                   onClick={() => setView("tasks")}
                 >
-                  Tarefas Salvas
+                  Saved Tasks
                 </Button>
               </HStack>
             )}
