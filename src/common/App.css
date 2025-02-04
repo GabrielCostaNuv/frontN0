@@ -56,10 +56,11 @@ body {
 
 /* Estilo para o formulário pop-up */
 .pop-up-form {
-  position: fixed;
+  /* position: fixed; */
   width: 19.3125rem; /* 309px */
-  bottom: 20px; /* 5px */
-  right: 25px; /* 5px */
+  margin: 15px auto 0px auto;
+  /* bottom: 20px;  */
+  /* right: 25px;  */
 }
 
 .pop-up-form.hidden {
@@ -80,7 +81,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  transition: all 0.3s ease;
+  /* transition: all 0.3s ease; */
   border-radius: 16px;
   position: relative;
   /* background-color: var(--white, white); */
@@ -210,7 +211,7 @@ body {
   left: 21px; */
   /* width: 269px; */
   z-index: 50;
-  margin-top: 38px;
+  /* margin-top: 38px; */
 }
 
 /* Estilo do textarea */
@@ -309,12 +310,17 @@ button.hidden {
 /* Estilo do ícone do microfone */
 .mic-button {
   position: absolute;
-  right: 0rem; /* right-[0.59rem] */
+  right: -0.3rem; /* right-[0.59rem] */
   top: 0.5rem; /* top-2 */
   cursor: pointer; /* hover:cursor-pointer */
-  transition: all 0.3s ease;
+  /* transition: all 0.3s ease; */
   background-color: transparent;
   border: 0;
+}
+
+.css-x5wr1s{
+  width: 95% !important;
+  margin-bottom: 0 !important;
 }
 
 .mic-icon:hover {

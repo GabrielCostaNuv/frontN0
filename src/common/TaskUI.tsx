@@ -154,10 +154,11 @@ const TaskUI = ({
         onKeyDown={onKeyDown}
         style={{
           borderRadius: "1.25rem",
-          padding: "10px 10px 0 10px",
+          padding: "10px 10px 0px",
           fontFamily: "Galano Grotesque Regular;",
-          marginLeft: "-6px",
-          marginTop: "-5px",
+          border: "none"
+          // marginLeft: "-11px",
+          // marginTop: "-5px",
         }}
       />
 

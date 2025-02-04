@@ -107,7 +107,7 @@ const SetAPIKey = ({
         margin: "0 auto",
       }}
     >
-      <p style={{ fontSize: "0.875rem" }}>
+      <p style={{ margin:"0" }}>
         Você precisará de uma chave de API do OpenAI ou Anthropic para executar
         o Nova no modo de desenvolvedor. Se você ainda não tiver uma, pode criar
         uma em sua{" "}
